@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Glorieta</title>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #ffd1dc, #e6e6fa, #87ceeb);
+            min-height: 100vh;
+            position: relative;
+            overflow-x: hidden;
+        }
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect fill="rgba(255,255,255,0.05)" width="100" height="100"/></svg>');
+            pointer-events: none;
+            opacity: 0.5;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 20px;
+            backdrop-filter: blur(5px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+        img {
+            max-width: 85%;
+            height: auto;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        img:hover {
+            transform: scale(1.02);
+        }
+        h1 {
+            font-family: 'Permanent Marker', cursive;
+            font-size: 4em;
+            color: #FF4500;
+            text-shadow: 
+                4px 4px 0 #000,
+                -1px -1px 0 #000,  
+                1px -1px 0 #000,
+                -1px 1px 0 #000,
+                1px 1px 0 #000;
+            letter-spacing: 2px;
+            transform: rotate(-2deg);
+            margin-bottom: 30px;
+            animation: shake 0.5s ease-in-out;
+        }
+        @keyframes shake {
+            0% { transform: rotate(-2deg); }
+            25% { transform: rotate(2deg); }
+            50% { transform: rotate(-2deg); }
+            75% { transform: rotate(2deg); }
+            100% { transform: rotate(-2deg); }
+        }  
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>La Glorieta</h1>
+        <!-- Primera imagen -->
+        <img src="D:\pagina web la glorieta\imagenes\bebidas.jpeg" alt="Imagen 1 de la Glorieta">
+        <!-- Segunda imagen -->
+        <img src="D:\pagina web la glorieta\imagenes\snacks.jpeg" alt="Imagen 2 de la Glorieta">
+    </div>
+</body>
+</html>
